@@ -68,7 +68,7 @@ class Search extends React.Component {
   renderSearchResults = () => {
     const { results } = this.state;
     console.log("Rendering search results with results", typeof(results));
-    if (results.length == 0) {
+    if (results.length === 0) {
       return;
     }
     
@@ -101,8 +101,6 @@ class Search extends React.Component {
   
 
   render() {
-
-    const { loading, results } = this.state;
   
     return (
       <div>

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 class Job {
-  constructor(company_name, company_logo, position, description, location, posted_on, link, tags, source) {
+  constructor(company_name, company_logo, position, description, location, posted_on, link, tags, source, id) {
       this.company_name = company_name;
       this.company_logo = company_logo;
       this.position = position;
@@ -11,6 +11,7 @@ class Job {
       this.link = link;
       this.source = source;
       this.tags = tags;
+      this.id = id;
   }
 }
 

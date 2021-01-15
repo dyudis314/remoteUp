@@ -3,7 +3,7 @@ import { Card, Accordion, Button, Badge } from 'react-bootstrap';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 const ResultCard = (result) => {
-  if (! result.company_name == "") {
+  if ( result.company_name !== "") {
   return ( 
 <ScrollAnimation
 animateIn="fadeIn"
@@ -26,11 +26,11 @@ animateOut='fadeOut'>
       </h5>
       </Card.Title>
       <Card.Text>
-        <p className="tags">
+        <h6 className="tags">
           <i>
         #{result.tags[0]} #{result.tags[1]} #{result.tags[2]}
         </i>
-        </p>
+        </h6>
         <div className="date">
           <i className="far fa-clock"></i><p className="posted-on">Posted on {result.posted_on}
           </p>
