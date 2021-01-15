@@ -3,6 +3,8 @@ import './Search.css';
 import './Results.css'
 import { Container, Form, Col, Row } from 'react-bootstrap';
 import ResultCard from './Card';
+import Select from 'react-select';
+import { colourOptions, groupedOptions } from '../data';
 const _ = require("lodash"); 
 
 class Search extends React.Component {
@@ -57,7 +59,7 @@ class Search extends React.Component {
 }
 
   handleOnInputChange = (event) => {
-  const query = event.target.value;
+  const query = event.value;
   if (! query ) {
     this.setState( {query, results: {}, message: '' });
    } else { 
@@ -101,6 +103,33 @@ class Search extends React.Component {
   
 
   render() {
+
+    /* Searchbar Autocomplete */
+    const groupStyles = {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+    };
+    
+    const groupBadgeStyles = {
+      backgroundColor: '#EBECF0',
+      borderRadius: '2em',
+      color: '#172B4D',
+      display: 'inline-block',
+      fontSize: 12,
+      fontWeight: 'normal',
+      lineHeight: '1',
+      minWidth: 1,
+      padding: '0.16666666666667em 0.5em',
+      textAlign: 'center',
+    };
+
+    const formatGroupLabel = data => (
+      <div style={groupStyles}>
+        <span>{data.label}</span>
+        <span style={groupBadgeStyles}>{data.options.length}</span>
+      </div>
+    );
   
     return (
       <div>
@@ -112,19 +141,18 @@ class Search extends React.Component {
           <h5>Work In Tech From Anywhere</h5>
             </div>
         {/* Search Input */}
-        <Form>
             <Col>  
-              <Form.Control 
-              placeholder={`Search ${this.props.jobs.length} remote tech jobs...`}
+              <Select 
               className="searchbox"
               type="text"
               name="query"
               value={this.query}
               id="search-input"
-              onChange = {_.debounce(this.handleOnInputChange, 150)}/>
-              <i className="fas fa-search search-icon"/>
+              onChange = {_.debounce(this.handleOnInputChange, 150)}           
+              options={groupedOptions}
+              formatGroupLabel={formatGroupLabel}/>
+              {/*<i className="fas fa-search search-icon"/>*/}
             </Col>  
-        </Form>
         </div>
 
       {/* Results Row */}

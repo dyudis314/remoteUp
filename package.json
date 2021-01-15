@@ -24,6 +24,7 @@
     "react-pagination-bootstrap": "^1.0.3",
     "react-scripts": "4.0.1",
     "react-search-autocomplete": "^2.0.0",
+    "react-select": "^3.2.0",
     "typed.js": "^2.0.11",
     "typeit": "^7.0.4",
     "typeit-react": "^0.1.3",
