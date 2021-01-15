@@ -33,7 +33,7 @@ animateOut='fadeOut'>
         </i>
         </p>
         <div className="date">
-          <i class="far fa-clock"></i><p className="posted-on">Posted on {result.posted_on}
+          <i className="far fa-clock"></i><p className="posted-on">Posted on {result.posted_on}
           </p>
         </div>                                  
       </Card.Text>
