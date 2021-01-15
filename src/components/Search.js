@@ -3,7 +3,6 @@ import './Search.css';
 import './Results.css'
 import { Container, Form, Col, Row } from 'react-bootstrap';
 import ResultCard from './Card';
-import AutoComplete from './AutoComplete.Js'
 const _ = require("lodash"); 
 
 class Search extends React.Component {
