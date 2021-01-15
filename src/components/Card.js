@@ -10,7 +10,8 @@ animateIn="fadeIn"
 animateOut='fadeOut'>
     <Card 
     href={result.link} 
-    target="_blank" className="result-item"
+    target="_blank" 
+    className="result-item"
     variant="success"
    >
   <Card.Img variant="top" src={result.company_logo} />

@@ -76,15 +76,14 @@ class Search extends React.Component {
     
       return (   
         
-        <div className="results-container">
-            <Container>
+            <Container
+             className="results-container">
               {_.uniqBy(results).map((result, index) => {
                 return <div>
                         {ResultCard(result)}
                        </div>
               })}             
             </Container>
-      </div>  
       )
   };
 

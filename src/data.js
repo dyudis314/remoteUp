@@ -2,7 +2,7 @@ export const positionOptions = [
   { value: 'Data Science', label: 'Data Science', color: '#FF8B00' },
   { value: 'DevOps', label: 'DevOps', color: '#FF5630', isFixed: true },
   { value: 'Front End Developer', label: 'Front End Developer', color: '#00B8D9', isFixed: true },
-  { value: 'FullStack', label: 'FullStack', color: '#5243AA' },
+  { value: 'Full Stack', label: 'Full Stack', color: '#5243AA' },
   { value: 'Sales Development Representative', label: 'Sales Development Representative', color: '#FFC400' },
   { value: 'Software Engineer', label: 'Software Engineer', color: '#0052CC', isFixed: true },
   { value: 'IT Support', label: 'IT Support', color: '#0052CC', isFixed: true },
