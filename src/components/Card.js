@@ -6,7 +6,6 @@ const ResultCard = (result) => {
   if (! result.company_name == "") {
   return ( 
 <ScrollAnimation
-delay={150}
 animateIn="fadeIn"
 animateOut='fadeOut'>
     <Card 
