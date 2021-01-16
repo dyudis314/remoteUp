@@ -10,15 +10,16 @@ export const positionOptions = [
 ];
 
 export const languageOptions = [
-  { value: 'JavaScript', label: 'JavaScript', rating: 'safe' },
+  { value: 'C', label: 'C', rating: 'crazy' },
+  { value: 'C#', label: 'C#', rating: 'crazy' },
+  { value: 'Go', label: 'Go', rating: 'crazy' },
   { value: 'Java', label: 'Java', rating: 'safe' },
+  { value: 'JavaScript', label: 'JavaScript', rating: 'safe' },
   { value: 'Python', label: 'Python', rating: 'good' },
   { value: 'React', label: 'React', rating: 'wild' },
   { value: 'React Native', label: 'React Native', rating: 'wild' },
-  { value: 'Ruby', label: 'Ruby', rating: 'crazy' },
-  { value: 'Go', label: 'Go', rating: 'crazy' },
-  { value: 'C#', label: 'C#', rating: 'crazy' },
-  { value: 'C', label: 'C', rating: 'crazy' },
+  { value: 'Ruby', label: 'Ruby', rating: 'crazy' }
+  
 ];
 
 export const optionLength = [

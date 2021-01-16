@@ -13,6 +13,7 @@
     "lodash": "^4.17.20",
     "lodash.uniqby": "^4.7.0",
     "mdbreact": "^5.0.1",
+    "rc-footer": "^0.6.3",
     "react": "^17.0.1",
     "react-animate-on-scroll": "^2.1.5",
     "react-autocomplete": "^1.8.1",

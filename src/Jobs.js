@@ -16,7 +16,7 @@ class Job {
 }
 
 const jobSources = {
-  'Remote Ok': [
+  'Remote OK': [
     () => {
       return new Promise((resolve, reject) => {
         axios.get('https://remoteok.io/api', {mode: 'no-cors'}).then((res) => {

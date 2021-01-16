@@ -1,10 +1,10 @@
 import React from 'react'; 
 import './Search.css';
 import './Results.css'
-import { Container, Form, Col, Row } from 'react-bootstrap';
+import { Container, Col, Row } from 'react-bootstrap';
 import ResultCard from './Card';
 import Select from 'react-select';
-import { colourOptions, groupedOptions } from '../data';
+import { groupedOptions } from '../data';
 const _ = require("lodash"); 
 
 class Search extends React.Component {

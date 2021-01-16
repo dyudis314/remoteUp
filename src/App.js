@@ -3,9 +3,8 @@ import './App.css';
 import { Container, Spinner } from 'react-bootstrap';
 import Search from './components/Search';
 import FetchJobs from './Jobs';
-import Footer from './components/Footer'
-import './Header.css'
-
+import './Header.css';
+import Footer from './components/Footer';
 
 const LoadingSpinner = () => 
 <Spinner 
@@ -32,7 +31,7 @@ const App = () => {
     <div>
       {jobData ? <Search jobs={jobData}/> : <LoadingSpinner />}
     </div>
-    {Footer()}
+    <Footer/>
     </Container>
   );
 }
