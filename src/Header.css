@@ -18,8 +18,10 @@
 }
 
 .heading-text h1 {
-  color: rgb(6, 6, 46);
+  color: transparent;
   display: inline-block;
+  -webkit-text-stroke: 1.25px black;
+  font-size: 50px;
 }
 
 .heading-text h1::after {
