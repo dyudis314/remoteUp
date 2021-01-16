@@ -10,4 +10,36 @@
 
 .footer-container {
   text-align: center;
+
+}
+
+li a {
+color:rgb(54, 54, 54);
+transition: all 0.4s;
+display: inline-block;
+}
+
+li a:hover {
+  color:rgb(0, 0, 0);
+
+}
+
+
+li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width .3s;
+}
+
+li a:hover::after {
+  width: 100%;
+}
+
+
+li a:link,
+li a:visited {
+  text-decoration: none;
 }
