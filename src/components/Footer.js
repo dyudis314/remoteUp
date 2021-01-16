@@ -10,10 +10,9 @@ const Footer = () => {
         <Row>
         {/* Column 1 */}
           <Col>
-            <h4></h4>
               <ul className="list-unstyled">
-              <li><a href="https://github.com/dyudis314/remoteUp" target="_blank">Contribute</a></li>
-              <li><a href="https://www.producthunt.com/posts/remote-jobs-api" target="_blank">Remote OK API</a></li>               
+              <li><a href="https://github.com/dyudis314/remoteUp" target="_blank" rel="noreferrer">Contribute</a></li>
+              <li><a href="https://www.producthunt.com/posts/remote-jobs-api" target="_blank" rel="noreferrer">Remote OK API</a></li>               
               </ul>
           </Col>
         {/* Column 2 */}
@@ -22,11 +21,10 @@ const Footer = () => {
           </Col>
         {/* Column 3 */}
         <Col>
-            <h4></h4>
               <ul className="list-unstyled">
-                <li><a href="https://www.dylanyudis.com/" target="_blank">Dylan Yudis | Work</a></li>
-                <li><a href="https://twitter.com/dylanyudis" target="_blank">Twitter</a></li>
-                <li><a href="https://github.com/dyudis314" target="_blank">GitHub</a></li>
+                <li><a href="https://www.dylanyudis.com/" target="_blank" rel="noreferrer">Dylan Yudis</a></li>
+                <li><a href="https://twitter.com/dylanyudis" target="_blank" rel="noreferrer">Twitter</a></li>
+                <li><a href="https://github.com/dyudis314" target="_blank" rel="noreferrer">GitHub</a></li>
               </ul>
           </Col>
         </Row>

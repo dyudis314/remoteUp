@@ -29,6 +29,8 @@
     "typed.js": "^2.0.11",
     "typeit": "^7.0.4",
     "typeit-react": "^0.1.3",
+    "typewriter-effect": "^2.17.0",
+    "wc-typed-js": "^1.0.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

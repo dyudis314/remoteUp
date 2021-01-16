@@ -5,6 +5,9 @@ import { Container, Col, Row } from 'react-bootstrap';
 import ResultCard from './Card';
 import Select from 'react-select';
 import { groupedOptions } from '../data';
+import TypeWriter from './Typewriter';
+
+
 const _ = require("lodash"); 
 
 class Search extends React.Component {
@@ -18,7 +21,7 @@ class Search extends React.Component {
         results: [],
         loading: false,
         message: '',
-        activePage: 1
+        //activePage: 1
       };
       
       this.remoteJobs = this.props.jobs;
@@ -37,7 +40,7 @@ class Search extends React.Component {
         // Add all of the tags individually to validFields,
         // e.g. this way you end up with ["developer", "golang", "js"] instead of ["developer", ["golang", "js"]]
        // validFields = validFields.concat(j.tags);
-        console.log("searching fields", validFields, "for job", j);
+        //console.log("searching fields", validFields, "for job", j);
         validFields.forEach((f) => {
             f = f.toLowerCase();
             if (f.includes(queryLowerCase) || queryLowerCase.includes(f)) { 
@@ -47,12 +50,9 @@ class Search extends React.Component {
     });
 
     let totalResults = foundJobs.length;
-    let message = `Found ${totalResults} jobs that match query ${query}`
-    console.debug(message);
     console.log("Setting state, this is", this);
     this.setState( {
       results: foundJobs,
-      message: message,
       totalResults: totalResults,
       loading: false,
   } )
@@ -137,7 +137,9 @@ class Search extends React.Component {
             <div className="heading-text">
               
           <h1>remoteUp</h1>
-          <h5>Work In Tech From Anywhere</h5>
+          <h5>Find a remote job in {TypeWriter()}</h5>
+          <h6>Work in tech, from anywhere.</h6>
+
             </div>
         {/* Search Input */}
             <Col>  

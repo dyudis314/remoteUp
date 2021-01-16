@@ -32,7 +32,7 @@ const jobSources = {
       // Transform a remoteok job into a Job object
       let timeStamp = new Date();
       let job_date =  timeStamp.toDateString();
-      return new Job(j.company, j.company_logo, j.position, j.description, j.location, job_date, j.url, j.tags, 'Remote Ok')
+      return new Job(j.company, j.company_logo, j.position, j.description, j.location, job_date, j.url, j.tags, 'Remote OK')
     }
   ]
 }
