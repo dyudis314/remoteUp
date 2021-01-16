@@ -18,6 +18,7 @@ class Search extends React.Component {
         results: [],
         loading: false,
         message: '',
+        featuredJob: [],
         //activePage: 1
       };
       
@@ -71,11 +72,10 @@ class Search extends React.Component {
       return;
     }
     
-      return (   
-        
+      return (          
             <Container
              className="results-container">
-              {_.uniqBy(results).map((result, index) => {
+              {_.uniqBy(results).map((result) => {
                 return <div>
                         {ResultCard(result)}
                        </div>
@@ -83,6 +83,27 @@ class Search extends React.Component {
             </Container>
       )
   };
+
+        /* Featured Job */
+    renderFeaturedJob = () => {
+      console.log('Here is your featured job:', this.props.jobs[0]);
+      /*
+      const { results } = this.state.results.slice(0, 5).map(result => {    
+        return (       
+          <Container
+          className="results-container">
+            Today's Featured Jobs:
+                    <div>
+                     {ResultCard(result)}
+                    </div>
+          </Container>
+          
+      )
+    }
+    */
+  };
+
+
 
                 /* Pagination Component */
   /*
@@ -152,11 +173,15 @@ class Search extends React.Component {
             </Col>  
         </div>
 
+        {/* Featured Job */}
+        <Row>
+            { ! this.renderSearchResults() ? this.renderFeaturedJob() : '' }
+        </Row>
+
       {/* Results Row */}
         <Row>
-            {this.renderSearchResults()}
-        </Row> 
-
+            { this.renderSearchResults() }
+        </Row>
       </div>
     )
   }

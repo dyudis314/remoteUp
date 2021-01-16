@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Container, Spinner } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
 import Search from './components/Search';
 import FetchJobs from './Jobs';
 import './Header.css';
 import Footer from './components/Footer';
-import ScrollAnimation from 'react-animate-on-scroll';
 
 const LoadingSpinner = () => 
 <Spinner 
@@ -31,7 +30,7 @@ const App = () => {
     <div>
       {jobData ? <Search jobs={jobData}/> : <LoadingSpinner />}
     </div>
-        <Footer/>   
+      <Footer/>   
     </div>
   );
 }
