@@ -5,7 +5,6 @@ export const positionOptions = [
   { value: 'Full Stack', label: 'Full Stack', color: '#5243AA' },
   { value: 'Sales Development Representative', label: 'Sales Development Representative', color: '#FFC400' },
   { value: 'Software Engineer', label: 'Software Engineer', color: '#0052CC', isFixed: true },
-  { value: 'IT Support', label: 'IT Support', color: '#0052CC', isFixed: true },
   { value: 'QA', label: 'QA', color: '#0052CC', isFixed: true }
 ];
 

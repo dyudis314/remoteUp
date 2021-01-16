@@ -14,7 +14,7 @@
 }
 
 li a {
-color:rgb(54, 54, 54);
+color:rgba(54, 54, 54, 0.788);
 transition: all 0.4s;
 display: inline-block;
 }

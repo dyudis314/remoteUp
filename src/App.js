@@ -5,6 +5,7 @@ import Search from './components/Search';
 import FetchJobs from './Jobs';
 import './Header.css';
 import Footer from './components/Footer';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const LoadingSpinner = () => 
 <Spinner 
@@ -26,13 +27,12 @@ const App = () => {
   })
 
   return (
-   <Container 
-    className="container">
+   <div className="container">
     <div>
       {jobData ? <Search jobs={jobData}/> : <LoadingSpinner />}
     </div>
-    <Footer/>
-    </Container>
+        <Footer/>   
+    </div>
   );
 }
 

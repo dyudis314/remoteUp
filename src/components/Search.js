@@ -1,13 +1,10 @@
 import React from 'react'; 
-import './Search.css';
 import './Results.css'
 import { Container, Col, Row } from 'react-bootstrap';
 import ResultCard from './Card';
 import Select from 'react-select';
 import { groupedOptions } from '../data';
 import TypeWriter from './Typewriter';
-
-
 const _ = require("lodash"); 
 
 class Search extends React.Component {
@@ -137,7 +134,7 @@ class Search extends React.Component {
             <div className="heading-text">
               
           <h1>remoteUp</h1>
-          <h5>Find a remote job in {TypeWriter()}</h5>
+          <h6>Find a remote job in<h2>{TypeWriter()}</h2></h6>
           <h6>Work in tech, from anywhere.</h6>
 
             </div>
@@ -152,7 +149,6 @@ class Search extends React.Component {
               onChange = {_.debounce(this.handleOnInputChange, 150)}           
               options={groupedOptions}
               formatGroupLabel={formatGroupLabel}/>
-              {/*<i className="fas fa-search search-icon"/>*/}
             </Col>  
         </div>
 

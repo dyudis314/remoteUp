@@ -1,3 +1,15 @@
+/* Searchbox*/
+
+.searchbox {
+  margin-top: 20px;
+  padding: 16px;
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+  color: #444;
+  }
+
+  /* Results */
 
 .results-container {
   display: inline;
