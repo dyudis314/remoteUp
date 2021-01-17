@@ -75,7 +75,7 @@ class Search extends React.Component {
       return (          
             <Container
              className="results-container">
-               <Alert variant="success" className="results-alert">
+               <Alert variant="primary" className="results-alert">
                 Browse {results.length} job results below!
                </Alert>
               {_.uniqBy(results).map((result) => {
