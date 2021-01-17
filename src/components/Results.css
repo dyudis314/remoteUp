@@ -1,15 +1,4 @@
-/* Searchbox*/
-
-.searchbox {
-  margin-top: 5px;
-  padding: 16px;
-  text-align: center;
-  font-size: 18px;
-  font-style: italic;
-  color: #444;
-  }
-
-  /* Results */
+/* Results */
 
 .results-container {
   display: inline;
@@ -26,6 +15,11 @@
 
 .result-item:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); 
+}
+
+.results-alert {
+  position: absolute;
+  margin-top: 7.5px;
 }
 
 .date {

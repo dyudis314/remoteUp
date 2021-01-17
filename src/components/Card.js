@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, Accordion, Button, Badge } from 'react-bootstrap';
-import ScrollAnimation from 'react-animate-on-scroll';
 
 const ResultCard = (result) => {
   if ( result.company_name !== "") {

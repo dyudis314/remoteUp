@@ -1,6 +1,6 @@
 import React from 'react'; 
 import './Results.css'
-import { Container, Col, Row, ProgressBar } from 'react-bootstrap';
+import { Alert, Container, Col, Row } from 'react-bootstrap';
 import ResultCard from './Card';
 import Select from 'react-select';
 import { groupedOptions } from '../data';
@@ -67,7 +67,7 @@ class Search extends React.Component {
   
   renderSearchResults = () => {
     const { results } = this.state;
-    console.log("Rendering search results with results", typeof(results));
+    
     if (results.length === 0) {
       return;
     }
@@ -75,6 +75,9 @@ class Search extends React.Component {
       return (          
             <Container
              className="results-container">
+               <Alert variant="success" className="results-alert">
+                Browse {results.length} job results below!
+               </Alert>
               {_.uniqBy(results).map((result) => {
                 return <div>
                         {ResultCard(result)}
@@ -151,13 +154,11 @@ class Search extends React.Component {
       <div>
         {/* Heading */}
         <div className="heading">
-            <div className="heading-text">
-              
+            <div className="heading-text">              
           <h1>remoteUp</h1>
           <h6>Find a remote job in<h2>{TypeWriter()}</h2></h6>
           <h6>Work in tech, from anywhere.</h6>
-
-            </div>
+      </div>
         {/* Search Input */}
             <Col>  
               <Select 
@@ -166,20 +167,21 @@ class Search extends React.Component {
               name="query"
               value={this.query}
               id="search-input"
-              onChange = {_.debounce(this.handleOnInputChange, 250)}           
+              onChange= {_.debounce(this.handleOnInputChange, 250)}           
               options={groupedOptions}
               formatGroupLabel={formatGroupLabel}/>
             </Col>  
         </div>
 
-        {/* Featured Job */}
+        {/* Featured Job 
         <Row>
             { ! this.renderSearchResults() ? this.renderFeaturedJob() : '' }
         </Row>
+*/}
 
       {/* Results Row */}
         <Row>
-            { this.renderSearchResults() }
+          { this.renderSearchResults() }       
         </Row>
         
       </div>
