@@ -1,6 +1,6 @@
 import React from 'react'; 
 import './Results.css'
-import { Container, Col, Row } from 'react-bootstrap';
+import { Container, Col, Row, ProgressBar } from 'react-bootstrap';
 import ResultCard from './Card';
 import Select from 'react-select';
 import { groupedOptions } from '../data';
@@ -104,7 +104,6 @@ class Search extends React.Component {
   };
 
 
-
                 /* Pagination Component */
   /*
           <Pagination bsName="test" size="sm">
@@ -167,7 +166,7 @@ class Search extends React.Component {
               name="query"
               value={this.query}
               id="search-input"
-              onChange = {_.debounce(this.handleOnInputChange, 150)}           
+              onChange = {_.debounce(this.handleOnInputChange, 250)}           
               options={groupedOptions}
               formatGroupLabel={formatGroupLabel}/>
             </Col>  
@@ -182,6 +181,7 @@ class Search extends React.Component {
         <Row>
             { this.renderSearchResults() }
         </Row>
+        
       </div>
     )
   }

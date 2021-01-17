@@ -5,9 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 const ResultCard = (result) => {
   if ( result.company_name !== "") {
   return ( 
-<ScrollAnimation
-animateIn="fadeIn"
-animateOut='fadeOut'>
+
     <Card 
     href={result.link} 
     target="_blank" 
@@ -65,7 +63,6 @@ animateOut='fadeOut'>
       </Accordion>
       </Card.Body>
   </Card>
-  </ScrollAnimation> 
     )
   }
 }
