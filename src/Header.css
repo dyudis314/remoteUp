@@ -25,9 +25,7 @@
   font-size: 60px;
 }
 
-.heading-text h1:hover {
-  color: rgba(95, 134, 219, 0.658);
-}
+.heading-text h1:hover { color: rgba(95, 134, 219, 0.658); }
 
 .heading-text h1::after {
   content: '';
@@ -38,16 +36,14 @@
   transition: width .3s;
 }
 
-.heading-text h1:hover::after {
-  width: 100%;
-}
+.heading-text h1:hover::after { width: 100%; }
 
 .heading-text:hover {
   color: black;
   cursor: pointer;
 }
 
-/* Searchbox*/
+/* Search Box */
 
 .searchbox {
   margin-top: -15px;

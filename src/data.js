@@ -1,3 +1,5 @@
+/* Search Autocomplete Data */
+
 export const positionOptions = [
   { value: 'Data Science', label: 'Data Science', color: '#FF8B00' },
   { value: 'DevOps', label: 'DevOps', color: '#FF5630', isFixed: true },
@@ -34,11 +36,6 @@ export const optionLength = [
       "It is now an easy matter to spell out the ethic of a truth: 'Do all that you can to persevere in that which exceeds your perseverance. Persevere in the interruption. Seize in your being that which has seized and broken you.",
   },
 ];
-
-// let bigOptions = [];
-// for (let i = 0; i < 10000; i++) {
-// 	bigOptions = bigOptions.concat(colourOptions);
-// }
 
 export const groupedOptions = [
   {

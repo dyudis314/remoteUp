@@ -1,38 +1,35 @@
 import React, { useState } from 'react';
-import './App.css';
+import FetchJobs from './Jobs';
+import Footer from './components/Footer';
 import { Spinner } from 'react-bootstrap';
 import Search from './components/Search';
-import FetchJobs from './Jobs';
+import './App.css';
 import './Header.css';
-import Footer from './components/Footer';
 
-const LoadingSpinner = () => 
-<Spinner 
-  animation="border" 
-  role="status"
-  className="spinner">
-  <span 
-  className="sr-only"
-  >
-    Loading...
-  </span>
-</Spinner>;
+  const LoadingSpinner = () => 
+    <Spinner 
+      animation="border" 
+      role="status"
+      className="spinner">
+        <span className="sr-only">
+          Loading...
+        </span>
+    </Spinner>;
 
-const App = () => {
-  const [jobData, setJobs] = useState(false);
-
-  FetchJobs().then((jobs) => {
-      setJobs(jobs);
-  })
+  const App = () => {
+    const [jobData, setJobs] = useState(false);
+    FetchJobs().then((jobs) => {
+        setJobs(jobs);
+});
 
   return (
    <div className="container">
     <div>
-      {jobData ? <Search jobs={jobData}/> : <LoadingSpinner />}
+      {jobData ? <Search jobs={jobData}/> : <LoadingSpinner/>}
     </div>
       <Footer/>   
     </div>
   );
-}
+};
 
 export default App;

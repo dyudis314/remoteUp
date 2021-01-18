@@ -8,10 +8,7 @@
   width: 100%;
 }
 
-.footer-container {
-  text-align: center;
-
-}
+.footer-container { text-align: center; }
 
 li a {
 color:rgba(54, 54, 54, 0.788);
@@ -19,11 +16,7 @@ transition: all 0.4s;
 display: inline-block;
 }
 
-li a:hover {
-  color:rgb(0, 0, 0);
-
-}
-
+li a:hover { color:rgb(0, 0, 0); }
 
 li a::after {
   content: '';
@@ -34,12 +27,7 @@ li a::after {
   transition: width .3s;
 }
 
-li a:hover::after {
-  width: 100%;
-}
-
+li a:hover::after { width: 100%; }
 
 li a:link,
-li a:visited {
-  text-decoration: none;
-}
+li a:visited { text-decoration: none; }
