@@ -1,5 +1,7 @@
 import React from 'react';
 import { Card, Accordion, Button, Badge } from 'react-bootstrap';
+const _ = require("lodash"); 
+
 
 const ResultCard = (result) => {
   if ( result.company_name === "") {
@@ -52,7 +54,7 @@ const ResultCard = (result) => {
 
           <Accordion.Collapse eventKey="0">
             <Card.Body>
-              {result.description}
+              { result.description.replace(/<[^>]+>/g, '') }
                 <br></br><br></br>
                   <Button 
                     variant="primary" 
@@ -76,5 +78,12 @@ const ResultCard = (result) => {
     )
   }
 }
+
+const originalString = `
+  <div>
+    <p>Hey that's <span>somthing</span></p>
+  </div>
+`;
+
 
 export default ResultCard;
