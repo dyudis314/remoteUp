@@ -11,7 +11,6 @@ export const positionOptions = [
 ];
 
 export const languageOptions = [
-  { value: 'C', label: 'C', rating: 'crazy' },
   { value: 'C#', label: 'C#', rating: 'crazy' },
   { value: 'Go', label: 'Go', rating: 'crazy' },
   { value: 'Java', label: 'Java', rating: 'safe' },
