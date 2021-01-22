@@ -3,6 +3,8 @@
 A web application that aggregates remote job opportunities to help those seeking employment during the pandemic.
 This project was built using [Create React App](https://github.com/facebook/create-react-app), JavaScript ES6 and CSS.
 
+[Hosted Link](https://www.remoteup.live/)
+
 # Project Screen Shots
 <img width="1204" alt="Screen Shot 2021-01-21 at 2 19 43 PM" src="https://user-images.githubusercontent.com/66389199/105427350-c97bf980-5c01-11eb-95c7-7ea5687781a5.png">
 <img width="1153" alt="Screen Shot 2021-01-21 at 3 57 44 PM" src="https://user-images.githubusercontent.com/66389199/105427357-cbde5380-5c01-11eb-8a7e-77f22d0cb2de.png">
