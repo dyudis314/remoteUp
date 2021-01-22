@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# remoteUp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web application that aggregates remote job opportunities to help those seeking employment during the pandemic.
+This project was built using [Create React App](https://github.com/facebook/create-react-app), JavaScript ES6 and CSS.
+
+# Project Screen Shots
+<img width="1204" alt="Screen Shot 2021-01-21 at 2 19 43 PM" src="https://user-images.githubusercontent.com/66389199/105427350-c97bf980-5c01-11eb-95c7-7ea5687781a5.png">
+<img width="1153" alt="Screen Shot 2021-01-21 at 3 57 44 PM" src="https://user-images.githubusercontent.com/66389199/105427357-cbde5380-5c01-11eb-8a7e-77f22d0cb2de.png">
 
 ## Available Scripts
 
@@ -68,3 +73,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Reflection
+remoteUp is a React-built offshoot of [Remote Tech Jobs](https://github.com/dyudis314/remotetechjobs), a project I created using plain ol’ JavaScript. I was having trouble making Remote Tech Jobs responsive, so I turned to a mentor for advice. He suggested that I revamp the project using React.Js and a library like Bootstrap. And voila! remoteUp was born. This was my first project using React.Js... I was able to tackle features like components and state. I implemented a whole new 3rd party [API](https://www.producthunt.com/posts/remote-jobs-api) to which the application queries all of its job results. The technologies implemented in this project are React, Bootstrap, LoDash, JavaScript ES6 and CSS. I chose to use  `create-react-app` to bypass initial setup and be able to explore new technologies to achieve a polished look and exceptional user experience. In the next iteration, I plan on creating my own API to pull local data from.
+
+# Inspirations
+My two main inspirations for the idea were [Remote OK](https://remoteok.io/) and [Protege.dev](https://protege.dev/). Thanks!
