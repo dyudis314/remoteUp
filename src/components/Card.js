@@ -3,7 +3,9 @@ import { Card, Accordion, Button, Badge } from 'react-bootstrap';
 const _ = require("lodash"); 
 
 
+
 const ResultCard = (result) => {
+
   if ( result.company_name === "") {
     return null
       } else {
@@ -53,8 +55,9 @@ const ResultCard = (result) => {
           </Card.Header>
 
           <Accordion.Collapse eventKey="0">
-            <Card.Body>
-              { result.description.replace(/<\/?("[^"]*"|'[^']*'|[^>])*(>|$)/g, "") }
+            <Card.Body
+            className="result_description">
+              {  result.description.replace(/<[^>]+>/g, '') }
                 <br></br><br></br>
                   <Button 
                     variant="primary" 
