@@ -17,7 +17,6 @@ const _ = require("lodash");
             results: [],
             loading: false,
             message: '',
-            featuredJob: [],
           //activePage: 1 --> For pagination!
             };
       this.remoteJobs = this.props.jobs;
