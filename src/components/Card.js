@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, Accordion, Button, Badge } from 'react-bootstrap';
-const _ = require("lodash"); 
 
 const stripTags = (str) => {
   return str.replace(/<[^>]+>/g, '');
