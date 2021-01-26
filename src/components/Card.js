@@ -2,7 +2,9 @@ import React from 'react';
 import { Card, Accordion, Button, Badge } from 'react-bootstrap';
 const _ = require("lodash"); 
 
-
+const stripTags = (str) => {
+  return str.replace(/<[^>]+>/g, '');
+}
 
 const ResultCard = (result) => {
 
@@ -57,8 +59,7 @@ const ResultCard = (result) => {
           <Accordion.Collapse eventKey="0">
             <Card.Body
             className="result_description">
-              {  result.description.replace(/<[^>]+>/g, '') 
-              }
+              {  stripTags(result.description)}
                 <br></br><br></br>
                   <Button 
                     variant="primary" 
