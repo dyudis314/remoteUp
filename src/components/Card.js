@@ -12,19 +12,19 @@ const ResultCard = (result) => {
 
     return (
     <Card 
-      href={result.link} 
+      href={result.link || result.url} 
       target="_blank" 
       className="result-item"
       variant="success">
         <Card.Img variant="top" src={result.company_logo} />
             <Card.Body>
               <Card.Title className="job-title">
-                <i>{result.company_name}</i> | {result.position}
+                <i>{result.company_name}</i> | {result.position || result.title}
                   <h5>
                     <Badge 
                       className="location"
                       variant="secondary">
-                        {result.location}                
+                        {result.location || result.candidate_required_location}                
                     </Badge>
                   </h5>
               </Card.Title>
@@ -38,7 +38,7 @@ const ResultCard = (result) => {
               
         <div className="date">
           <i className="far fa-clock"></i>
-            <h6 className="posted-on">Posted on {result.posted_on}</h6>
+            <h6 className="posted-on">Posted on {result.posted_on || result.publication_date }</h6>
         </div>                                  
       </Card.Text>
 

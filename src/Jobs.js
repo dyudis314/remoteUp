@@ -16,26 +16,54 @@ import axios from 'axios';
     }
 
   const jobSources = {
-    'Remote OK': [
-      () => {
-        return new Promise((resolve, reject) => {
-          axios.get('https://remoteok.io/api', {mode: 'no-cors'}).then((res) => {
-            if (res.status === 200){
-            resolve(res.data.slice(1));
-            } else {
-              reject(res.status);
-            }
-          })
+
+
+  'Remote OK': [
+    () => {
+      return new Promise((resolve, reject) => {
+        axios.get('https://remoteok.io/api', {mode: 'no-cors'}).then((res) => {
+          if (res.status === 200){
+          resolve(res.data.slice(1));
+          console.log(res.data.slice(1));
+          } else {
+            reject(res.status);
+          }
         })
-      },
-      (j) => {
-        // Transform a remoteok job into a Job object
-        let timeStamp = new Date();
-        let job_date =  timeStamp.toDateString();
-          return new Job(j.company, j.company_logo, j.position, j.description, j.location, job_date, j.url, j.tags, 'Remote OK')
-      }
-    ]
-  }
+      })
+    }, 
+    
+    (j) => {
+      // Transform a remoteok job into a Job object
+      let timeStamp = new Date();
+      let job_date =  timeStamp.toDateString();
+        return new Job(j.company, j.company_logo, j.position, j.description, j.location, job_date, j.url, j.tags, 'Remote OK')
+    }
+  ],
+
+  'Remotive': [
+    () => {
+      return new Promise((resolve, reject) => {
+        axios.get('https://remotive.io/api/remote-jobs', {mode: 'no-cors'}).then((res) => {
+          if (res.status === 200){
+          resolve(res.data);
+          console.log(res.data);
+          } else {
+            reject(res.status);
+          }
+        })
+      })
+    }, 
+    
+    (j) => {
+      // Transform a remoteok job into a Job object
+      let timeStamp = new Date();
+      let job_date =  timeStamp.toDateString();
+        return new Job(j.company, j.company_logo, j.position, j.description, j.location, job_date, j.url, j.tags, 'Remotive')
+    }
+  ]
+
+}
+
 
   const cachedJobs = {};
 
