@@ -57,7 +57,8 @@ const ResultCard = (result) => {
           <Accordion.Collapse eventKey="0">
             <Card.Body
             className="result_description">
-              {  result.description.replace(/<[^>]+>/g, '') }
+              {  result.description.replace(/<[^>]+>/g, '') 
+              }
                 <br></br><br></br>
                   <Button 
                     variant="primary" 
