@@ -69,22 +69,28 @@ import axios from 'axios';
 
   const FetchJobs = () => { 
     return new Promise((resolve, reject) => {
+      let foundJobs = [];
       Object.entries(jobSources).forEach(([sourceName, sourceUtils]) => {
      
         if (sourceName in cachedJobs) {
           console.log(`Found cached jobs from ${sourceName}`);
           resolve(cachedJobs[sourceName]);
+          //resolve(cachedJobs[sourceName]);
+          // add cachedJobs[sourceName] to found jobs
         } else {
             console.log(`Fetching jobs from ${sourceName}...`);
             sourceUtils[0]().then((jobData) => {
             const sourceJobs = jobData.map(sourceUtils[1]);
             cachedJobs[sourceName] = sourceJobs;
             resolve(sourceJobs);
+             //resolve(sourceJobs)
+            // add sourceJobs to foundJobs
           }).catch((err) => {
             console.error(`Error retrieving jobs from ${sourceName}`);
             reject(err);
           })
         }
+        resolve(foundJobs);
       });
     });
   }
