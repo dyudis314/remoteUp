@@ -130,8 +130,7 @@ const _ = require("lodash");
                 type="text"
                 name="query"
                 value={this.query}
-                readonly
-                id="search-input"
+                readonly="readonly"                id="search-input"
                 onChange= {_.debounce(this.handleOnInputChange, 250)}           
                 options={groupedOptions}
                 formatGroupLabel={formatGroupLabel}/>
