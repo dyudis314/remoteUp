@@ -17,7 +17,6 @@ const _ = require("lodash");
             results: [],
             loading: false,
             message: '',
-          //activePage: 1 --> For pagination!
             };
       this.remoteJobs = this.props.jobs;
   };
@@ -86,7 +85,6 @@ const _ = require("lodash");
   render() {
 
     /* Searchbar Autocomplete */
-
     const groupStyles = {
       display: 'flex',
       alignItems: 'center',
@@ -132,6 +130,7 @@ const _ = require("lodash");
                 type="text"
                 name="query"
                 value={this.query}
+                readonly
                 id="search-input"
                 onChange= {_.debounce(this.handleOnInputChange, 250)}           
                 options={groupedOptions}
@@ -148,21 +147,4 @@ const _ = require("lodash");
   };
 };
 
-export default Search;
-
-
-
-                /* Pagination Component */
-  /*
-          <Pagination bsName="test" size="sm">
-
-        {_.uniqBy(results).map((result, index) => {
-            <Pagination.Item 
-              key={index} 
-              active={(index + 1 === this.state.activePage)}>
-                    {ResultCard(result)}
-            </Pagination.Item>
-          </Pagination>
-  */
-
-  
+export default Search; 
