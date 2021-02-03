@@ -39,29 +39,6 @@ import axios from 'axios';
         return new Job(j.company, j.company_logo, j.position, j.description, j.location, job_date, j.url, j.tags, 'Remote OK')
     }
   ],
-
-  'Remotive': [
-    () => {
-      return new Promise((resolve, reject) => {
-        axios.get('https://remotive.io/api/remote-jobs', {mode: 'no-cors'}).then((res) => {
-          if (res.status === 200){
-          resolve(res.data);
-          console.log(res.data);
-          } else {
-            reject(res.status);
-          }
-        })
-      })
-    }, 
-    
-    (j) => {
-      // Transform a remoteok job into a Job object
-      let timeStamp = new Date();
-      let job_date =  timeStamp.toDateString();
-        return new Job(j.company, j.company_logo, j.position, j.description, j.location, job_date, j.url, j.tags, 'Remotive')
-    }
-  ]
-
 }
 
 
