@@ -69,7 +69,7 @@ const _ = require("lodash");
         <Container
           className="results-container">
             <Alert variant="primary" className="results-alert">
-              Browse {results.length} job results below!
+              Browse job results below!
             </Alert>
               {/* 'uniqBy' lodash method screens for duplicate job results! */}
                 {_.uniqBy(results).map((result) => {
