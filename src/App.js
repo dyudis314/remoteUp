@@ -27,7 +27,7 @@ import './Header.css';
     <div>
       {jobData ? <Search jobs={jobData}/> : <LoadingSpinner/>}
     </div>
-      <Footer/>   
+      <Footer className="footer"/>   
     </div>
   );
 };
