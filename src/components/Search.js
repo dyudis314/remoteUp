@@ -63,22 +63,28 @@ const _ = require("lodash");
     const { results } = this.state;
     
     if (results.length === 0) {
-      return;
-    }
+      
+      return (
+        <Container className="results-container">
+          <Alert variant="primary" className="results-alert">
+              Oops...Trying searching for a different job!
+          </Alert>
+        </Container>
+      )
+    } else {
       return (          
-        <Container
-          className="results-container">
+        <Container className="results-container">
             <Alert variant="primary" className="results-alert">
-              Browse job results below!
+              Browse {results.length} jobs below!
             </Alert>
-              {/* 'uniqBy' lodash method screens for duplicate job results! */}
+              {/* 'uniqBy' lodash method screens for duplicate job results */}
                 {_.uniqBy(results).map((result) => {
                   return <div>
                           {ResultCard(result)}
                         </div>
                       })}             
         </Container>
-      );
+    )};
   };
 
 

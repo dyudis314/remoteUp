@@ -2,7 +2,7 @@
 
 .results-alert {
   position: absolute;
-  margin-top: 7.5px;
+ /* margin: 7.5px 0px 7.5px 0px;*/
   text-align: center;
 }
 

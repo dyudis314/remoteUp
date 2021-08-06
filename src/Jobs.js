@@ -24,7 +24,7 @@ import axios from 'axios';
         axios.get('https://remoteok.io/api', {mode: 'no-cors'}).then((res) => {
           if (res.status === 200){
           resolve(res.data.slice(1));
-          console.log(res.data.slice(1));
+          //console.log(res.data.slice(1));
           } else {
             reject(res.status);
           }
@@ -49,10 +49,10 @@ import axios from 'axios';
       Object.entries(jobSources).forEach(([sourceName, sourceUtils]) => {
      
         if (sourceName in cachedJobs) {
-          console.log(`Found cached jobs from ${sourceName}`);
+          //console.log(`Found cached jobs from ${sourceName}`);
           resolve(cachedJobs[sourceName]);
         } else {
-            console.log(`Fetching jobs from ${sourceName}...`);
+            //console.log(`Fetching jobs from ${sourceName}...`);
             sourceUtils[0]().then((jobData) => {
             const sourceJobs = jobData.map(sourceUtils[1]);
             cachedJobs[sourceName] = sourceJobs;
