@@ -67,7 +67,7 @@ const _ = require("lodash");
       return (
         <Container className="results-container">
           <Alert variant="primary" className="results-alert">
-              Oops...Trying searching for a different job!
+              Oops...Try searching for a different job!
           </Alert>
         </Container>
       )

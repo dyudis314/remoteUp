@@ -2,8 +2,9 @@
 
 .results-alert {
   position: absolute;
- /* margin: 7.5px 0px 7.5px 0px;*/
+  margin-top: 10px;
   text-align: center;
+  justify-content: center;
 }
 
 .results-container {
